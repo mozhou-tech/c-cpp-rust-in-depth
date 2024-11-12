@@ -15,6 +15,15 @@
 //esi: 字符串操作时，用于存放数据源的地址
 //edi: 字符串操作时，用于存放目的地址的，和esi两个经常搭配一起使用，执行字符串的复制等操作
 
-int main() {
- 
+int main()
+{
+    // Declaring a register variable 'i' and initializing it
+    // with 10
+    register int i = 10;
+    // Creating a pointer variable 'a' and assigning the
+    // address of 'i' to it
+    int* a = &i;
+    printf("%d", *a);
+    getchar();
+    return 0;
 }
