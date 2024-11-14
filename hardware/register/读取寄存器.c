@@ -19,11 +19,12 @@ int main()
 {
     // Declaring a register variable 'i' and initializing it
     // with 10
+    // register 存储类用于定义存储在寄存器中而不是 RAM 中的局部变量。这意味着变量的最大尺寸等于寄存器的大小（通常是一个字），
+    // 且不能对它应用一元的 '&' 运算符（因为它没有内存位置）。
+    // register 存储类定义存储在寄存器，所以变量的访问速度更快，但是它不能直接取地址，因为它不是存储在 RAM 中的。
+    // 在需要频繁访问的变量上使用 register 存储类可以提高程序的运行速度。
     register int i = 10;
-    // Creating a pointer variable 'a' and assigning the
-    // address of 'i' to it
-    int* a = &i;
-    printf("%d", *a);
-    getchar();
+
+    printf("value %d",i);
     return 0;
 }
