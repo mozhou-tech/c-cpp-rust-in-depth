@@ -8,5 +8,5 @@ include_directories(.)
 add_executable(cpp_in_depth
         LinkedList.cpp
         LinkedList.h
-        ../../c/pointer/指针数组.c
-        ../../c/pointer/指针的指针.c)
+        ../../pointer/指针数组.c
+        ../../pointer/指针的指针.c)
