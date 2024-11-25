@@ -1,3 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
 project(pointer VERSION 1.0)
 
+add_executable(pointer NULL指针.c)
+add_executable(pointer 指针函数.c)
+add_executable(pointer 函数返回指针.c)
+add_executable(pointer 指针的指针.c)
+add_executable(pointer 回调函数.c)
+add_executable(pointer 指针的算术运算.c)
+add_executable(pointer 指针数组.c)
+add_executable(pointer 传递指针给函数.c)
