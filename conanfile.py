@@ -11,6 +11,7 @@ class ExampleRecipe(ConanFile):
         self.requires("zlib/1.2.11")
         self.requires("openssl/3.3.2")
         self.requires("gtest/1.15.0")
+        self.requires("cjson/1.7.18")
 
     def layout(self):
         cmake_layout(self)
