@@ -1,0 +1,11 @@
+[settings]
+arch=armv8
+os=Macos
+os.version=14.7
+compiler=apple-clang
+compiler.version=16
+compiler.cppstd=20
+compiler.libcxx=libc++
+build_type=Debug
+[conf]
+tools.cmake.cmaketoolchain:generator=Ninja
