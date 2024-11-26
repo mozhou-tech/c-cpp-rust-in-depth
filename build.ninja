@@ -40,6 +40,38 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = /Users/mozhou/CLionProjects/c-cpp-rust-in-depth/
+# =============================================================================
+# Object build statements for EXECUTABLE target new_target
+
+
+#############################################
+# Order-only phony target for new_target
+
+build cmake_object_order_depends_target_new_target: phony || CMakeFiles/new_target.dir
+
+build CMakeFiles/new_target.dir/test_package/src/hello_test.cpp.o: CXX_COMPILER__new_target_unscanned_Debug /Users/mozhou/CLionProjects/c-cpp-rust-in-depth/test_package/src/hello_test.cpp || cmake_object_order_depends_target_new_target
+  DEP_FILE = CMakeFiles/new_target.dir/test_package/src/hello_test.cpp.o.d
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.7 -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/new_target.dir
+  OBJECT_FILE_DIR = CMakeFiles/new_target.dir/test_package/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target new_target
+
+
+#############################################
+# Link the executable new_target
+
+build new_target: CXX_EXECUTABLE_LINKER__new_target_Debug CMakeFiles/new_target.dir/test_package/src/hello_test.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.7
+  LINK_FLAGS = -L/opt/homebrew/opt/mysql-client@5.7/lib
+  OBJECT_DIR = CMakeFiles/new_target.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = new_target
+  TARGET_PDB = new_target.dbg
+
 
 #############################################
 # Utility command for test
@@ -86,7 +118,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/mozhou/CLionProjects/c-cpp-rust-in-depth
 
-build all: phony
+build all: phony new_target
 
 # =============================================================================
 # Built-in targets

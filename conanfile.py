@@ -4,9 +4,11 @@ from conan.tools.cmake import cmake_layout, CMake
 
 class ExampleRecipe(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
-    generators = "CMakeDeps", "CMakeToolchain"
+    generators = "CMakeDeps", "CMakeToolchain", "VirtualRunEnv", "VirtualBuildEnv"
+    test_type = "explicit"
 
     def requirements(self):
+        self.requires(self.tested_reference_str)
         self.requires("paho-mqtt-cpp/1.4.1")
         self.requires("zlib/1.2.11")
         self.requires("openssl/3.3.2")
@@ -19,8 +21,3 @@ class ExampleRecipe(ConanFile):
     def layout(self):
         cmake_layout(self)
 
-    def build(self):
-        cmake = CMake(self)
-        cmake.configure()
-        cmake.build()
-        cmake.test()
