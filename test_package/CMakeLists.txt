@@ -10,4 +10,4 @@ find_package(GTest REQUIRED)
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${CONAN_LIBS})
 enable_testing()
 
-add_test(hello_unittest src/hello_test.cpp)
+add_test(build/hello_unittest src/hello_test.cpp)

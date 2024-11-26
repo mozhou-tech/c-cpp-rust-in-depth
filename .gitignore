@@ -36,3 +36,4 @@ build
 CMakeFiles
 .cmake
 Testing
+.ninja*
